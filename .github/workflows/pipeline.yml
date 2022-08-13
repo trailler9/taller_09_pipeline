@@ -1,0 +1,17 @@
+name: Mi megatriler
+
+on: 
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize]
+
+jobs:
+  taller:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Dame la fecha de hoy
+        run: date\
+      - name: Que directorios tengo
+        run: ls -l
