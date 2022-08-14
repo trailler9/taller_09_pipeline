@@ -11,7 +11,9 @@ jobs:
   taller:
     runs-on: ubuntu-22.04
     steps:
-      - name: Dame la fecha de hoy
-        run: date\
-      - name: Que directorios tengo
+      - name: Descargar ultimos cambios
+        uses: actions/checkout@v3.0.2
+        with:
+          fetch-depth: 0
+      - name: Visualizar Cambios
         run: ls -l
