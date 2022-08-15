@@ -22,6 +22,7 @@ jobs:
           distribution: "temurin"
           server-id: github
           settings-path: ${{github.workspace}}
+          cache: "maven"
       - name: Ejecucion de test
         run: mvn -B test --f pom.xml
       - name: Generacion del artefacto
