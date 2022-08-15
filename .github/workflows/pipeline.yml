@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-java@v3.4.1
         with:
           java-version: "11"
-          distribution: "emurin"
+          distribution: "temurin"
           server-id: github
           settings-path: ${{github.workspace}}
       - name: Ejecucion de test
