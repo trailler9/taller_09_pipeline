@@ -30,4 +30,5 @@ jobs:
       - name: Ejecucion de test
         run: mvn -B test --f pom.xml
       - name: Generacion del artefacto
+        if: ${{github.event_name = 'push'}}
         run: mvn -B package -DskipTests -f pom.xml
