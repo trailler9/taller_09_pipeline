@@ -19,7 +19,7 @@ public class App1ApplicationTests {
 	private TestRestTemplate restTemplate;
 
 	@Test
-	public void getHello() throws Exception {
+	public void getRequestHelloTest() throws Exception {
 		assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/hello",
 				String.class)).contains("Spring Boot Application - Valle Grande Taller");
 	}
