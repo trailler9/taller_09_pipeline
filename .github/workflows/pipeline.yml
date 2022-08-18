@@ -59,6 +59,10 @@ jobs:
     runs-on: ubuntu-22.04
     if: ${{github.event_name == 'push'}}
     steps:
+      - name: Descargar ultimos cambios
+        uses: actions/checkout@v3.0.2
+        with:
+          fetch-depth: 0
       - name: Deploy heroku App
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
