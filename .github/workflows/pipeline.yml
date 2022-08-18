@@ -59,5 +59,9 @@ jobs:
     runs-on: ubuntu-22.04
     if: ${{github.event_name == 'push'}}
     steps:
-      - name: Deploy
-        run: date
+      - name: Deploy heroku App
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "app-taller-09"
+          heroku_email: "jose.aricochea@vallegrande.edu.pe"
